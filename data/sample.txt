@@ -1,0 +1,7 @@
+Retrieval-Augmented Generation (RAG) is a technique that combines a retrieval system with a large language model. Instead of relying solely on the model's training data, RAG first searches a knowledge base for relevant documents, then passes those documents as context to the LLM.
+
+The main components of a RAG pipeline are: a document loader that reads text from files or APIs, a text splitter that breaks documents into smaller chunks, an embedding model that converts chunks into numerical vectors, a vector store that indexes and searches those vectors, and a retriever that fetches the most relevant chunks for a given query.
+
+Chroma is an open-source vector database that runs locally with no infrastructure required. It stores embeddings on disk and supports similarity search using cosine distance. It is a popular choice for prototyping RAG systems because setup takes less than a minute.
+
+LangChain is a framework for building LLM applications. It provides abstractions for document loaders, text splitters, embedding models, vector stores, and retrieval chains. This makes it easy to swap components — for example, changing from Chroma to Weaviate requires only one line of code.
